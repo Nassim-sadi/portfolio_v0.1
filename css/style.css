@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+:root {
+  --site-bg-clr: 237, 242, 244;
+  --site-second-clr: 43, 45, 66;
+  --site-acnt-clr: 239, 35, 60;
+  --gradient-color-1: #00f260;
+  --gradient-color-2: #0575e6;
+  --gradient-color-3: #200122;
+  --gradient-color-4: #6f0000;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  /* background-color: rgb(var(--site-bg-clr)); */
+  color: rgb(var(--site-bg-clr));
+}
+.introduction {
+  height: 100vh;
+}
+.introduction h1 span {
+  color: gold;
+}
+.introduction h1 {
+  font-size: 400%;
+  margin-top: 20vh;
+  margin-bottom: 15vh;
+}
+
+.item {
+  height: 30vh;
+  font-size: 1.5em;
+
+  width: 15vw;
+}
+
+/* .row img {
+  width: 15rem;
+} */
+.comParent {
+  position: relative;
+}
+.communication {
+  position: fixed;
+  border-radius: 33%;
+  width: 8rem;
+  height: 2rem;
+  font-weight: bold;
+  background-color: #326bf1;
+  left: 30vw;
+
+  animation: stickRight 1250ms linear both alternate;
+}
+.com_animation {
+  transform: translateX(10rem) translateY(10rem);
+}
+
+@keyframes stickRight {
+  0% {
+    position: fixed;
+    transform: translateX(0) translateY(0);
+  }
+
+  50% {
+    position: fixed;
+    transform: translateX(20rem) translateY(20rem);
+  }
+  100% {
+    position: fixed;
+    transform: translateX(20rem) translateY(20rem);
+  }
+}
+
+.communication:hover {
+  animation-play-state: paused;
+}
+.spacing {
+  height: 30vh;
+}
+/* ---------------------------------------  */
+
+/*--------------rgb effects ============================  */
+
+.rgb::after {
+  content: "";
+  background: linear-gradient(
+      45deg,
+      #ff0000 0%,
+      #ff9a00 10%,
+      #d0de21 20%,
+      #4fdc4a 30%,
+      #3fdad8 40%,
+      #2fc9e2 50%,
+      #1c7fee 60%,
+      #5f15f2 70%,
+      #ba0cf8 80%,
+      #fb07d9 90%,
+      #ff0000 100%
+    )
+    repeat 0% 0% / 300% 100%;
+  position: absolute;
+  inset: -3px;
+}
+@keyframes rgb {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.rgb::after {
+  border-radius: 0px;
+  filter: blur(8px);
+  transform: translateZ(-1px); /*or z-index */
+  animation: rgb 6s linear infinite;
+}
+/* ====================== 3d tilt affect ========================  */
+
+.card {
+  padding: 0px 3rem;
+}
+.card img {
+  transform: translateZ(20px);
+}
+.threeD {
+  transform-style: preserve-3d;
+  background-color: #100815;
+}
+/* =======Fullscreen Animation background ================== */
+.background {
+  background: linear-gradient(
+    0deg,
+    var(--gradient-color-1),
+    var(--gradient-color-2)
+  );
+  background-size: 400% 400%;
+  animation: Gradient 20000ms ease infinite;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0px;
+}
+.cube {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #d7d4e4;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 12s ease-in forwards infinite;
+}
+.cube:nth-child(2n) {
+  border-color: #fff;
+}
+.cube:nth-child(2) {
+  animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  animation-delay: 3s;
+  left: 75vw;
+  top: 50vh;
+}
+.cube:nth-child(4) {
+  animation-delay: 5s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  animation-delay: 6s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  animation-delay: 8s;
+  left: 50vw;
+  top: 10vh;
+}
+
+/* Animate Background*/
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: -10;
+}
