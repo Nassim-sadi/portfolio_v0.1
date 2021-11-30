@@ -13,10 +13,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <title>Nassim Sadi Portfolio</title>
   </head>
   <body>
+    <!-- background section ----------------------------------- -->
     <header>
       <div class="background">
         <div class="cube"></div>
@@ -26,19 +31,122 @@
         <div class="cube"></div>
       </div>
     </header>
+    <!-- end background section ----------------- -->
+    <nav class="navbar navbar-expand-md navbar-light bg-transparent">
+      <div class="container-md">
+        <button
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-3">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mx-3 align-baseline">
+              <a
+                class="nav-link"
+                href="https://www.linkedin.com/in/nassim-sadi-22587b156/"
+                target="blank"
+              >
+                GitHub</a
+              >
+            </li>
+            <li class="nav-item mx-3 align-baseline">
+              <a
+                class="nav-link"
+                href="https://www.linkedin.com/in/nassim-sadi-22587b156/"
+                target="blank"
+              >
+                LinkedIn</a
+              >
+            </li>
 
-    <div class="container-fluid px-4">
-      <div class="introduction">
-        <h1 class="text-center">
-          <p>Nassim SADI</p>
-          <p>i'm a <span id="identity"></span></p>
-        </h1>
+            <li class="nav-item mx-3">
+              <a href="#" class="nav-link">Download CV</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <!-- <div class="comParent">
-        <div class="communication">sup</div>
-      </div> -->
-      <div class="row">
-        <div class="col">
+    </nav>
+
+    <div class="container-xxl">
+      <div class="row introduction">
+        <div class="col-md-6">
+          <h1>
+            Nassim SADI <br />
+            <span id="identity"></span>
+          </h1>
+        </div>
+        <div class="col-md-6 profile">
+          <img class="img-fluid" src="img/dash.png" alt="personel picture" />
+        </div>
+      </div>
+
+      <div onclick="activateHover()" class="fab-container">
+        <div class="fab">
+          <div class="fab-content">
+            <span class="fa fa-mail-forward"></span>
+          </div>
+        </div>
+
+        <div class="sub-button">
+          <a
+            href="https://www.facebook.com/nassim.sadi4/"
+            target="blank"
+            class="social-margin"
+          >
+            <div class="social-icon facebook">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </div>
+          </a>
+        </div>
+        <div class="sub-button">
+          <!-- LinkedIn Button -->
+          <a
+            href="https://www.linkedin.com/in/nassim-sadi-22587b156/"
+            class="social-margin"
+            target="blank"
+          >
+            <div class="social-icon linkedin">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </div>
+          </a>
+        </div>
+        <div class="sub-button">
+          <!-- Github Button -->
+          <a
+            href="https://github.com/Nassim-sadi"
+            target="blank"
+            class="social-margin"
+          >
+            <div class="social-icon github">
+              <i class="fa fa-github-alt" aria-hidden="true"></i>
+            </div>
+          </a>
+        </div>
+        <div class="sub-button">
+          <a
+            href="https://twitter.com/Nassimsadi4"
+            target="blank"
+            class="social-margin"
+          >
+            <div class="social-icon twitter">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row justify-content-center gap-2">
+        <div class="col-10 col-sm-10 col-md-3 mx-2">
           <div
             data-tilt
             data-tilt-perspective="1200"
@@ -47,12 +155,12 @@
             data-tilt-scale="1"
             class="card rgb threeD"
           >
-            <img
+            <!-- <img
               src="img/fav.png"
               class="card-img-top"
               alt="..."
               style="background-size: cover"
-            />
+            /> -->
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">
@@ -62,7 +170,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-sm-12 col-md-4">
+        <div class="col-10 col-sm-10 col-md-3 mx-2">
           <div
             data-tilt
             data-tilt-perspective="1200"
@@ -71,12 +179,12 @@
             data-tilt-scale="1"
             class="card rgb threeD"
           >
-            <img
+            <!-- <img
               src="img/fav.png"
               class="card-img-top"
               alt="..."
               style="background-size: cover"
-            />
+            /> -->
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">
@@ -86,7 +194,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-10 col-sm-10 col-md-3 mx-2">
           <div
             data-tilt
             data-tilt-perspective="1200"
@@ -95,12 +203,12 @@
             data-tilt-scale="1"
             class="card rgb threeD"
           >
-            <img
+            <!-- <img
               src="img/fav.png"
               class="card-img-top"
               alt="..."
               style="background-size: cover"
-            />
+            /> -->
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">
@@ -154,95 +262,38 @@
         <div class="item" data-aos="fade"></div>
       </div>
     </div>
-    <div class="container py-3">
-      <footer class="pt-4 my-md-5 pt-md-5 border-top">
-        <div class="row">
-          <div class="col-6 col-md">
-            <h5>Features</h5>
-            <ul class="list-unstyled text-small">
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Cool stuff</a
-                >
-              </li>
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Random feature</a
-                >
-              </li>
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Team feature</a
-                >
-              </li>
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Stuff for developers</a
-                >
-              </li>
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Another one</a
-                >
-              </li>
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Last time</a
-                >
-              </li>
-            </ul>
+
+    <footer>
+      <div class="social-buttons bg-transparent">
+        <!-- facebook  Button -->
+        <a href="http://www.facebook.com" target="blank">
+          <div class="social-icon facebook">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
           </div>
-          <div class="col-6 col-md">
-            <h5>Resources</h5>
-            <ul class="list-unstyled text-small">
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Resource</a
-                >
-              </li>
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Resource name</a
-                >
-              </li>
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Another resource</a
-                >
-              </li>
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Final resource</a
-                >
-              </li>
-            </ul>
+        </a>
+        <!-- LinkedIn Button -->
+        <a href="http://linkedin.com/" target="blank">
+          <div class="social-icon linkedin">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
           </div>
-          <div class="col-6 col-md">
-            <h5>About</h5>
-            <ul class="list-unstyled text-small">
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#">Team</a>
-              </li>
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Locations</a
-                >
-              </li>
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Privacy</a
-                >
-              </li>
-              <li class="mb-1">
-                <a class="link-secondary text-decoration-none" href="#"
-                  >Terms</a
-                >
-              </li>
-            </ul>
+        </a>
+        <!-- Github Button -->
+        <a href="https://github.com/" target="blank">
+          <div class="social-icon github">
+            <i class="fa fa-github-alt" aria-hidden="true"></i>
           </div>
-        </div>
-      </footer>
-    </div>
+        </a>
+        <!-- TwitterButton -->
+        <a href="http://twitter.com/" target="blank">
+          <div class="social-icon twitter">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </div>
+        </a>
+        <p class="text-secondary fw-bold">
+          All rights reserved for Nassim sadi 2021
+        </p>
+      </div>
+    </footer>
 
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

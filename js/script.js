@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //----------typer setting
 
   var Typeoptions = {
-    strings: ["Mobile Developer .^1000", "Web Developer .^1000"],
+    strings: ["i'm a Mobile Developer .^2000", "i'm a Web Developer .^1000"],
     typeSpeed: 100,
     loop: true,
   };
@@ -34,3 +34,11 @@ var observer = new IntersectionObserver(function (entries, observer) {
   });
 }, options);
 //observer.observe(com);
+var communication = document.querySelector(".fab-container");
+function activateHover() {
+  if (communication.classList.contains("fab-hover")) {
+    communication.classList.remove("fab-hover");
+  } else {
+    communication.classList.add("fab-hover");
+  }
+}

@@ -1,145 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 :root {
-  --site-bg-clr: 237, 242, 244;
-  --site-second-clr: 43, 45, 66;
-  --site-acnt-clr: 239, 35, 60;
-  --gradient-color-1: #00f260;
-  --gradient-color-2: #0575e6;
-  --gradient-color-3: #200122;
-  --gradient-color-4: #6f0000;
+  --site-bg-clr: #e2e2e2;
+  --site-second-clr: #2e2e2e;
+  --site-acnt-clr: #e63946;
+  --site-acnt2-clr: #28c2c7;
+  --site-acnt3-clr: #219ce9;
+  /* CSS HEX pallete */
+  --grey1: #f8f9faff;
+  --grey2: #e9ecefff;
+  --grey3: #dee2e6ff;
+  --grey4: #ced4daff;
+  --grey5: #adb5bdff;
+  --grey6: #6c757dff;
+  --grey7: #495057ff;
+  --grey8: #343a40ff;
+  --grey9: #212529ff;
+  --font-fira-sans: "Fira Sans", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --main-font: var(--font-fira-sans);
 }
-
-body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
-  /* background-color: rgb(var(--site-bg-clr)); */
-  color: rgb(var(--site-bg-clr));
-}
-.introduction {
-  height: 100vh;
-}
-.introduction h1 span {
-  color: gold;
-}
-.introduction h1 {
-  font-size: 400%;
-  margin-top: 20vh;
-  margin-bottom: 15vh;
-}
-
-.item {
-  height: 30vh;
-  font-size: 1.5em;
-
-  width: 15vw;
-}
-
-/* .row img {
-  width: 15rem;
-} */
-.comParent {
-  position: relative;
-}
-.communication {
-  position: fixed;
-  border-radius: 33%;
-  width: 8rem;
-  height: 2rem;
-  font-weight: bold;
-  background-color: #326bf1;
-  left: 30vw;
-
-  animation: stickRight 1250ms linear both alternate;
-}
-.com_animation {
-  transform: translateX(10rem) translateY(10rem);
-}
-
-@keyframes stickRight {
-  0% {
-    position: fixed;
-    transform: translateX(0) translateY(0);
-  }
-
-  50% {
-    position: fixed;
-    transform: translateX(20rem) translateY(20rem);
-  }
-  100% {
-    position: fixed;
-    transform: translateX(20rem) translateY(20rem);
-  }
-}
-
-.communication:hover {
-  animation-play-state: paused;
-}
-.spacing {
-  height: 30vh;
-}
-/* ---------------------------------------  */
-
-/*--------------rgb effects ============================  */
-
-.rgb::after {
-  content: "";
-  background: linear-gradient(
-      45deg,
-      #ff0000 0%,
-      #ff9a00 10%,
-      #d0de21 20%,
-      #4fdc4a 30%,
-      #3fdad8 40%,
-      #2fc9e2 50%,
-      #1c7fee 60%,
-      #5f15f2 70%,
-      #ba0cf8 80%,
-      #fb07d9 90%,
-      #ff0000 100%
-    )
-    repeat 0% 0% / 300% 100%;
-  position: absolute;
-  inset: -3px;
-}
-@keyframes rgb {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-.rgb::after {
-  border-radius: 0px;
-  filter: blur(8px);
-  transform: translateZ(-1px); /*or z-index */
-  animation: rgb 6s linear infinite;
-}
-/* ====================== 3d tilt affect ========================  */
-
-.card {
-  padding: 0px 3rem;
-}
-.card img {
-  transform: translateZ(20px);
-}
-.threeD {
-  transform-style: preserve-3d;
-  background-color: #100815;
-}
+/* !!!!!!!!!!!!!!!done    */
 /* =======Fullscreen Animation background ================== */
+
 .background {
-  background: linear-gradient(
-    0deg,
-    var(--gradient-color-1),
-    var(--gradient-color-2)
-  );
+  background: radial-gradient(circle at bottom, #fff, transparent 80%),
+    linear-gradient(to top, dodgerblue 0%, transparent 70%),
+    linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.4) 70%),
+    #1e90ff;
+
   background-size: 400% 400%;
-  animation: Gradient 20000ms ease infinite;
+  animation: bg 50000ms ease infinite;
   position: relative;
   height: 100vh;
   width: 100%;
@@ -188,17 +79,22 @@ body {
 }
 
 /* Animate Background*/
-@keyframes Gradient {
-  0% {
-    background-position: 0% 50%;
+@keyframes bg {
+  0%,
+  100% {
+    background-color: #1e90ff;
+  }
+  25% {
+    background-color: #39d24a;
   }
   50% {
-    background-position: 100% 50%;
+    background-color: #ffe244;
   }
-  100% {
-    background-position: 0% 50%;
+  75% {
+    background-color: #ff36a3;
   }
 }
+
 @keyframes cube {
   from {
     transform: scale(0) rotate(0deg) translate(-50%, -50%);
@@ -218,3 +114,334 @@ header {
   padding: 0;
   z-index: -10;
 }
+/* --------------scrollbar -------------------------  */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #6b6b6b;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9e9e9e;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #787878;
+}
+::-webkit-scrollbar-track {
+  background: #fafafa;
+  border: 0px none #ffffff;
+  border-radius: 44px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #fafafa;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/* -----------animated social*/
+footer {
+  position: relative;
+}
+footer a {
+  margin: 0px 5px;
+}
+.social-buttons {
+  display: block;
+  background: rgba(256, 256, 256, 0.5);
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  margin: 0px;
+  width: 100%;
+}
+
+/* Helper class to divide the icons */
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+.social-icon {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  -moz-border-radius: 138px;
+  -webkit-border-radius: 138px;
+  border-radius: 138px;
+  border: 5px solid;
+  display: inline-block;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+
+  line-height: 1px;
+  padding-top: 11px;
+  transition: all 0.5s;
+}
+.social-icon:hover {
+  transform: rotate(360deg) scale(1.3);
+}
+/* Facebook Button Styling */
+.facebook {
+  font-size: 22px;
+  padding-top: 9px;
+  border-color: #3b5998;
+  background-color: #3b5998;
+  color: #ffffff;
+}
+.facebook:hover {
+  background-color: #ffffff;
+  color: #3b5998;
+}
+/* Twitter Button Styling */
+.twitter {
+  font-size: 22px;
+  padding-top: 10px;
+  padding-left: 2px;
+  border-color: #55acee;
+  background-color: #55acee;
+  color: #ffffff;
+}
+.twitter:hover {
+  background-color: #ffffff;
+  color: #55acee;
+}
+/* Linkedin Button Styling */
+.linkedin {
+  font-size: 24px;
+  padding-top: 8px;
+  padding-left: 1px;
+  background-color: #0976b4;
+  color: #ffffff;
+  border-color: #0976b4;
+}
+.linkedin :hover {
+  background-color: #ffffff;
+  color: #0976b4;
+}
+/* Github Button Styling */
+.github {
+  font-size: 22px;
+  padding-top: 9px;
+  background-color: #4183c4;
+  color: #ffffff;
+  border-color: #4183c4;
+}
+.github:hover {
+  background-color: #ffffff;
+  color: #4183c4;
+}
+
+/*--------------rgb effects ============================  */
+
+.rgb::after {
+  content: "";
+  background: linear-gradient(
+      45deg,
+      #ff0000 0%,
+      #ff9a00 10%,
+      #d0de21 20%,
+      #4fdc4a 30%,
+      #3fdad8 40%,
+      #2fc9e2 50%,
+      #1c7fee 60%,
+      #5f15f2 70%,
+      #ba0cf8 80%,
+      #fb07d9 90%,
+      #ff0000 100%
+    )
+    repeat 0% 0% / 300% 100%;
+  position: absolute;
+  inset: -3px;
+}
+@keyframes rgb {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.rgb::after {
+  border-radius: 0px;
+  filter: blur(8px);
+  transform: translateZ(-1px); /*or z-index */
+  animation: rgb 6s linear infinite;
+}
+/* ====================== 3d tilt affect ========================  */
+
+/* .card {
+  padding: 0px 3rem;
+} */
+.card img {
+  transform: translateZ(20px);
+}
+.threeD {
+  transform-style: preserve-3d;
+}
+/* ! compelted sticky contact me , may be animate it if you can  */
+.fab-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  user-select: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 2;
+}
+.fab-container:hover {
+  height: 100%;
+}
+
+.fab-container:hover .sub-button:nth-child(2) {
+  transform: translateY(-65px);
+}
+.fab-container:hover .sub-button:nth-child(3) {
+  transform: translateY(-125px);
+}
+.fab-container:hover .sub-button:nth-child(4) {
+  transform: translateY(-185px);
+}
+.fab-container:hover .sub-button:nth-child(5) {
+  transform: translateY(-245px);
+}
+.fab-container:hover .sub-button:nth-child(6) {
+  transform: translateY(-305px);
+}
+.fab-hover:active {
+  height: 100%;
+}
+.fab-hover .sub-button:nth-child(2) {
+  transform: translateY(-65px);
+}
+.fab-hover .sub-button:nth-child(3) {
+  transform: translateY(-125px);
+}
+.fab-hover .sub-button:nth-child(4) {
+  transform: translateY(-185px);
+}
+.fab-hover .sub-button:nth-child(5) {
+  transform: translateY(-245px);
+}
+.fab-container .fab {
+  position: relative;
+  height: 65px;
+  width: 65px;
+  background-color: #4ba2ff;
+  border-radius: 50%;
+  z-index: 2;
+}
+.fab-container .fab::before {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 30px;
+  width: 30px;
+  background-color: inherit;
+  border-radius: 0 0 10px 0;
+  z-index: -1;
+}
+.fab-container .fab .fab-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.fab-container .sub-button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -6px;
+  right: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.fab-container .sub-button:hover {
+  cursor: pointer;
+}
+
+/*   *Above is done */
+/* *TODO ---------------*/
+body {
+  font-family: var(--main-font);
+  font-weight: 300;
+  background-color: var(--grey2);
+  color: var(--grey8);
+}
+.introduction {
+  height: 100vh;
+  padding: 20vh 0px;
+  margin: auto;
+}
+.introduction div {
+  text-align: center;
+  min-height: 500px;
+}
+.introduction h1 span {
+  color: gold;
+  font-style: italic;
+}
+.introduction h1 {
+  font-size: 5rem;
+}
+
+.item {
+  height: 30vh;
+  font-size: 1.5em;
+  width: 15vw;
+}
+
+.spacing {
+  height: 30vh;
+}
+/* -----------------navbar---------------------  */
+.navbar .nav-link {
+  color: var(--grey8) !important;
+}
+.navbar .nav-item:hover {
+  background-color: rgba(61, 61, 61, 0.089);
+  border-radius: 30px;
+  transition: background-color 250ms;
+}
+.navbar .nav-item .nav-link {
+  font-family: var(--main-font);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: normal;
+}
+.nav-item svg {
+  height: 30px;
+}
+
+/* ---------------Sticky contact me------------------------  */
+/* !todo finish this sticky -------------------------*/
+
+/* ---------------------------------------  */
+
+/* ---------------------------------------  */
+/* ---------------------------------------  */
+/* ---------------------------------------  */
+/* ---------------------------------------  */
