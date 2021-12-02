@@ -36,9 +36,5 @@ var observer = new IntersectionObserver(function (entries, observer) {
 //observer.observe(com);
 var communication = document.querySelector(".fab-container");
 function activateHover() {
-  if (communication.classList.contains("fab-hover")) {
-    communication.classList.remove("fab-hover");
-  } else {
-    communication.classList.add("fab-hover");
-  }
+  communication.classList.toggle("touchmobile");
 }
