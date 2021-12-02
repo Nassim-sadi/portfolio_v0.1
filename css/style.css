@@ -256,8 +256,11 @@ a:active {
     transform: scale(1);
   }
 }
-.fab-container:hover {
+.fab-container {
   height: 100%;
+}
+.fab-container .sub-button {
+  transform: translateY(0);
 }
 
 .fab-container:hover .fab {
@@ -279,9 +282,7 @@ a:active {
 .fab-container:hover .sub-button:nth-child(6) {
   transform: translateY(-305px);
 }
-.fab-hover:active {
-  height: 100%;
-}
+
 .fab-hover .sub-button:nth-child(2) {
   transform: translateY(-65px);
 }
