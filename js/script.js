@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //----------typer setting
 
   var Typeoptions = {
-    strings: ["i'm a Mobile Developer .^2000", "i'm a Web Developer .^1000"],
+    strings: ["a Mobile Developer.^2000", "a Web Developer.^1000"],
     typeSpeed: 100,
     loop: true,
   };
@@ -27,13 +27,7 @@ const options = {
   root: null,
   threshold: 1,
 };
-var observer = new IntersectionObserver(function (entries, observer) {
-  entries.forEach((entry) => {
-    entry.target.classList.toggle("com_animation");
-    console.log(entry.target);
-  });
-}, options);
-//observer.observe(com);
+
 var communication = document.querySelector(".fab-container");
 function activateHover() {
   communication.classList.toggle("touchmobile");
