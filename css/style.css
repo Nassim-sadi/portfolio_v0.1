@@ -82,7 +82,7 @@ footer a {
 }
 .social-buttons {
   display: block;
-  background: rgba(256, 256, 256, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   position: absolute;
   bottom: 0px;
   text-align: center;
@@ -261,6 +261,7 @@ a:active {
 
 .fab {
   animation: hithere 3000ms ease infinite;
+  animation-play-state: running;
 }
 .fab:hover {
   animation-play-state: paused;
