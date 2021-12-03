@@ -261,10 +261,12 @@ a:active {
 
 .fab {
   animation: hithere 3000ms ease infinite;
-  animation-play-state: running;
 }
 .fab:hover {
   animation-play-state: paused;
+}
+.fab-container .fab {
+  animation-play-state: running;
 }
 
 @keyframes hithere {
