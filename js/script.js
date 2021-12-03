@@ -27,8 +27,32 @@ const options = {
   root: null,
   threshold: 1,
 };
-
 var communication = document.querySelector(".fab-container");
+// function activateHover() {
+//   communication.classList.add("touchmobile");
+
+//   console.log("toggled somehow");
+//   $(document).on("click", function (e) {
+//     if ($(e.target).is(".fab-container .touchmobile") === false) {
+//       $(".fab-container").removeClass("touchmobile");
+//       console.log("did it again hah fuck you ");
+//     }
+//   });
+// }
 function activateHover() {
-  communication.classList.toggle("touchmobile");
+  $(".fab-container").on("click", function (e) {
+    $(".fab-container").toggleClass("touchmobile");
+  });
+  $(document).on("click", function (e) {
+    if ($(e.target).is("#contact-me") === false) {
+      $(".fab-container").removeClass("touchmobile");
+    }
+  });
 }
+
+// $("body")
+//   .not("#contact-me")
+//   .click(function (e) {
+//     $(".fab-container").removeClass("touchmobile");
+//     console.log("removed class :v");
+//   });
