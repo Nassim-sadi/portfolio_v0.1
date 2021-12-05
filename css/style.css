@@ -5,7 +5,7 @@
   --site-sndfont-clr: gold;
   --site-acnt-clr: #e63946;
   --site-acnt2-clr: #28c2c7;
-  --site-acnt3-clr: #219ce9;
+  --site-acnt3-clr: #1e1e1e;
   /* CSS HEX pallete */
   --grey1: #f8f9faff;
   --grey2: #e9ecefff;
@@ -26,7 +26,7 @@
 /* Animate Background*/
 
 header {
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background: radial-gradient(ellipse at bottom, #0e141b 0%, #090a0f 100%);
   overflow: hidden;
   position: fixed;
   top: 0%;
@@ -73,13 +73,7 @@ header {
   background: transparent;
 }
 /* -----------animated social*/
-footer {
-  position: relative;
-  margin-top: 2vh;
-}
-footer a {
-  margin: 10px 5px;
-}
+
 .social-buttons {
   display: block;
   background: rgba(255, 255, 255, 0.5);
@@ -115,6 +109,7 @@ a:active {
   padding-top: 11px;
   transition: all 0.5s;
 }
+
 .social-icon:hover {
   transform: rotate(360deg) scale(1.3);
 }
@@ -142,7 +137,7 @@ a:active {
 
 .mail {
   font-size: 20px;
-  padding-top: 8px;
+  padding-top: 6px;
   padding-left: 1px;
   border-color: #55acee;
   background-color: #55acee;
@@ -217,24 +212,7 @@ a:active {
   transform: translateZ(-1px); /*or z-index */
   animation: rgb 6s linear infinite;
 }
-/*===========footer ================= */
-.footer {
-  position: absolute;
-  margin-top: 50px;
-  width: 100%;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.05), transparent);
-  min-height: 100px;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: -2;
-}
-.footer a {
-  font-weight: bold;
-  color: var(--site-sndfont-clr);
-}
+
 /* ====================== 3d tilt affect ========================  */
 
 /* .card {
@@ -375,6 +353,10 @@ a:active {
 .fab-container .sub-button:hover {
   cursor: pointer;
 }
+::selection {
+  background-color: var(--site-sndfont-clr);
+  color: var(--site-acnt3-clr);
+}
 
 /*  *=================Above is done -------------*/
 /* *TODO ------------**************--*/
@@ -421,9 +403,33 @@ nav {
   flex-flow: row-reverse wrap;
 }
 nav .nav-link {
+  position: relative;
   margin-left: 1rem;
   color: var(--site-mainfont-clr);
-  border-bottom: var(--site-mainfont-clr) 1px solid;
+  padding-top: 10;
+  padding-left: 0;
+  padding-bottom: 10px;
+  padding-right: 0px;
+
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+nav .nav-link::after {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: var(--site-sndfont-clr);
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav .nav-link:hover::after {
+  width: 100%;
 }
 nav .nav-link:hover {
   background-color: rgba(153, 153, 153, 0.219);
@@ -436,7 +442,7 @@ nav .nav-link:hover {
 nav .nav-link {
   font-family: var(--main-font);
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
 }
 
@@ -456,6 +462,148 @@ a .fa {
 }
 /* ---------------Sticky contact me------------------------  */
 /* !todo finish this sticky -------------------------*/
+/*FOOTER*/
+
+.border-shape {
+  background: #ffbe00 none repeat scroll 0 0;
+  color: #fff;
+  display: block;
+  height: 3px;
+  left: 0;
+  margin: 20px auto;
+  position: relative;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 80px;
+}
+
+.border-shape::before {
+  background: #ffbe00 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 80px;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  top: 1px;
+  width: 100px;
+}
+
+.border-shape::after {
+  background: #ffbe00 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  margin: 0 auto;
+  position: absolute;
+  right: 80px;
+  text-align: center;
+  top: 1px;
+  width: 100px;
+}
+
+footer {
+  margin-top: 5vh;
+  width: 100%;
+  background: #8e999900;
+  background: -webkit-radial-gradient(bottom, #8e999900, #050505);
+  background: -moz-radial-gradient(bottom, #8e999900, #050505);
+  background: radial-gradient(to top, #8e999900, #050505);
+  color: var(--site-mainfont-clr);
+  font-weight: 400;
+}
+
+.top_header {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.top_header section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.top_header span {
+  padding: 0 1rem;
+}
+
+.top_header .fa {
+  color: #ffbe00;
+  font-size: 35px;
+}
+
+footer .border-shape {
+  width: 40%;
+}
+
+footer .border-shape::before {
+  width: 100%;
+  left: 120px;
+}
+
+footer .border-shape::after {
+  width: 100%;
+  right: 120px;
+}
+
+footer .bottom_content section {
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: Center;
+}
+
+.bottom_content a {
+  margin: 0 20px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.5s;
+}
+
+.bottom_content a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.copyright {
+  padding: 0.8em 0;
+  background-color: var(--site-sndfont-clr);
+  text-align: center;
+  color: var(--site-acnt3-clr);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+@media (max-width: 820px) {
+  .top_header {
+    padding: 1rem;
+    display: block;
+  }
+
+  .top_header section {
+    margin: 40px 0;
+    align-items: left;
+    justify-content: left;
+  }
+  footer .bottom_content section {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: Center;
+  }
+  footer .bottom_content section a {
+    padding: 0.5rem;
+    font-size: 12px;
+    margin: 0 5px;
+    display: inline-block;
+    justify-content: center;
+  }
+}
 
 /* ---------------------------------------  */
 
