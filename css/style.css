@@ -513,7 +513,7 @@ a .fa {
 footer {
   margin-top: 5vh;
   width: 100%;
-  background: #8e999900;
+  background: #0e141b;
   background: -webkit-radial-gradient(bottom, #8e999900, #050505);
   background: -moz-radial-gradient(bottom, #8e999900, #050505);
   background: radial-gradient(to top, #8e999900, #050505);
@@ -615,6 +615,11 @@ footer .bottom_content section {
 
 .profile {
 }
+.container-xxl > .row {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
 /* ---------------------------------------  */
 /* ---------------------------------------  */
 /* ---------------------------------------  */
