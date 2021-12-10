@@ -365,16 +365,6 @@ body {
   font-weight: 300;
   color: var(--site-mainfont-clr);
 }
-.introduction {
-  height: 100vh;
-  padding-top: 10vh;
-  margin-bottom: 5vh;
-}
-@media only screen and (min-width: 768px) {
-  .introduction {
-    padding-top: 20vh;
-  }
-}
 
 .introduction > div {
   text-align: center;
@@ -390,9 +380,6 @@ body {
   font-style: italic;
   text-align: start;
 }
-.introduction h1 {
-  font-size: 4.5rem;
-}
 
 .item {
   height: 30vh;
@@ -400,26 +387,31 @@ body {
   width: 15vw;
 }
 
-.spacing {
-  height: 30vh;
-}
 /* -----------------navbar---------------------  */
 nav {
   display: flex;
-  flex-flow: row-reverse wrap;
+  gap: 1rem;
+  margin-top: 10px;
+  flex-direction: row-reverse;
 }
+
+nav ul {
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  list-style: none;
+}
+
 nav .nav-link {
   position: relative;
   margin-left: 1rem;
   color: var(--site-mainfont-clr);
-  padding-top: 10;
+  padding-top: 5px;
   padding-left: 0;
   padding-bottom: 10px;
-  padding-right: 0px;
-
+  padding-right: 0;
   margin-left: 0;
   margin-bottom: 0;
-  margin-top: 10px;
   margin-right: 5px;
 }
 nav .nav-link::after {
@@ -452,9 +444,6 @@ nav .nav-link {
   line-height: normal;
 }
 
-nav li {
-  display: inline-block;
-}
 nav .nav-link:focus {
   color: var(--site-sndfont-clr);
   border-color: var(--site-sndfont-clr);
@@ -585,7 +574,31 @@ footer .bottom_content section {
   font-weight: 400;
 }
 
+/* *  ---------------------------------*/
+@media only screen and (min-width: 768px) {
+  .introduction {
+    margin-top: 20vh;
+  }
+
+  .introduction h1 {
+    font-size: 4.5rem;
+  }
+  .introduction {
+    height: 65vh;
+    padding-top: 10vh;
+    margin-bottom: 5vh;
+  }
+}
+
 @media (max-width: 768px) {
+  .introduction {
+    height: 50vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  .introduction h1 {
+    font-size: 2.5rem;
+  }
   .top_header {
     padding: 1rem;
     display: block;
@@ -610,7 +623,6 @@ footer .bottom_content section {
     justify-content: center;
   }
 }
-
 /* ---------------------------------------  */
 
 .container-xxl > .row {
