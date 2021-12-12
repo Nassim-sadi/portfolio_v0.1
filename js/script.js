@@ -7,7 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
   //----------typer setting
 
   var Typeoptions = {
-    strings: ["a Mobile Developer.^2000", "a Web Developer.^1000"],
+    strings: [
+      "a Mobile Developer using Flutter.^2000",
+      "a junior web developer.^1000",
+    ],
     typeSpeed: 100,
     loop: true,
   };
